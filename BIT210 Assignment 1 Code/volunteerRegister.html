@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
+        crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <title>Volunteer Registration</title>
+</head>
+<body class="bg-light">
+    <section class="vh-100">
+        <div class="container-fluid">
+          <div class="row">
+              <div class="text-center text-dark display-4">
+                <img src="images/logo.png" alt="" class="schoolHELP-logo mt-3">
+                <h3>SchoolHELP</h3>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-center h-custom-2">
+      
+                <form class="volunteer-form">
+      
+                  <h3 class="fw-bold mb-3 pb-3 text-center">Volunteer Registration</h3>
+      
+                  <!--username-->
+                  <div class="form-group mb-2">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" id="username" 
+                        class="form-control form-control-sm" placeholder="Enter username"/>
+                  </div>
+
+                    <!--full nname-->
+                    <div class="form-group mb-2">
+                        <label class="form-label" for="fullname">Full Name</label>
+                        <input type="text" id="fullname" 
+                            class="form-control form-control-sm" placeholder="e.g. Norman Yap"/>
+                      </div>
+
+
+                      <!--phone number-->
+                    <div class="form-group mb-2">
+                        <label class="form-label" for="phoneNumber">Mobile No.</label>
+                        <input type="tel" id="phoneNumber" 
+                            class="form-control form-control-sm" placeholder="e.g. 0124074452"/>
+                      </div>
+                    
+                     <!--occupation-->
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="occupation">Occupation</label>
+                    <input type="text" id="occupation" 
+                        class="form-control form-control-sm" placeholder="Enter username"/>
+                  </div>
+
+                   <!--date of birth-->
+                   <div class="form-group mb-2">
+                    <label for="birthday" class="form-label">Date of Birth</label>
+                    <input type="date" id="birthday" name="birthday">
+                  </div>
+
+                  <!--email-->
+                  <div class="form-group mb-2">
+                    <label class="form-label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" 
+                        id="email" placeholder="Enter email">
+                  </div>
+        
+                  <!--password-->
+                  <div class="form-group mb-2">
+                    <label class="form-label" for="form2Example28">Password</label>
+                    <input type="password" id="password" 
+                        class="form-control form-control-sm" 
+                        placeholder="At least 8 characters with 1 capital letter"/>
+                  </div>
+
+                  <!--confirm password-->
+                  <div class="form-group mb-3">
+                    <label class="form-label" for="form2Example28">Confirm Password</label>
+                    <input type="password" id="confirmPassword" 
+                        class="form-control form-control-sm" />
+                  </div>
+      
+                  <!--submit button-->
+                  <div class="pt-1">
+                    <button class="btn btn-info btn-md btn-block" type="button">Sign Up</button>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+        </div>
+      </section>
+</body>
+</html>
