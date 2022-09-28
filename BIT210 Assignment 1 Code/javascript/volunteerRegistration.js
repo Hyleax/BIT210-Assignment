@@ -18,10 +18,15 @@ const volunteerRegistrationValidation = () => {
     if (checkEmailAddress() && // check if email contains '@' and '.com'
         checkPasswordStrength() && // check if password is strong enough
         checkSamePassword() &&  //check if password and confirmPassword are the same
-        checkForEmptyInput()) { // check if all fields in the form have been filled
-
+        checkForEmptyInput()) {// check if all fields in the form have been filled    
         clearForm()
-        window.location = "volunteerProfile.html"
+
+        let nextSibling = submitBtn.nextElementSibling;
+        nextSibling.classList.add('successMsg')
+            nextSibling.textContent = " Volunteer has been registered"
+        setTimeout(()=> {
+            window.location = "login.html"
+        }, 2000)
     }
 
 }
@@ -97,14 +102,14 @@ const checkSamePassword = () => {
     }
 }
 
-// make error messages disapper after 2 seconds
+//takes 2 seconds for error msg to disapper
 const makeErrorMsgDisapper = (sibling) => {
     setTimeout(()=>{
         sibling.textContent = ""
     }, 2000)
 }
 
-// clears form after submitBtn is clicked
+// clears the form after submitBtn is clicked
 const clearForm = () => {
     usernameEL.textContent = ""
     fullNameEL.textContent = ""
