@@ -19,6 +19,11 @@
     margin-bottom: 30px;
 }
 
+.successMsg {
+    color:chartreuse;
+    font-weight: bold;
+}
+
 .errorMsg {
     color: red;
 }
