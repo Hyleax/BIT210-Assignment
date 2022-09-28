@@ -97,12 +97,14 @@ const checkSamePassword = () => {
     }
 }
 
+// make error messages disapper after 2 seconds
 const makeErrorMsgDisapper = (sibling) => {
     setTimeout(()=>{
         sibling.textContent = ""
     }, 2000)
 }
 
+// clears form after submitBtn is clicked
 const clearForm = () => {
     usernameEL.textContent = ""
     fullNameEL.textContent = ""
