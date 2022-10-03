@@ -27,7 +27,26 @@
 .errorMsg {
     color: red;
 }
- 
+
+
+/*CSS for schoolAdmin Submitting Request page*/
+.tutorial--container{
+    display: none;
+} 
+
+.resource--container{
+    display: none;
+}
+
+#tutorial-label:hover {
+    font-weight: 800;
+}
+
+#resource-label:hover {
+    font-weight: 800;
+}
+
+
     @media (min-width: 1025px) {
     .h-custom-2 {
     height: 80%;
