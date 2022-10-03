@@ -41,7 +41,12 @@ const checkRequestType = () => {
 const requestValidation = () => {
     if (checkForEmptyInput()){
         alert("Request has been submitted")
-        newRequest = {requestDate: Date.now()}
+        let newRequest = 
+            {
+                requestDate: Date.now(),
+                requestID: `REQ${requestArray.length+1}`,
+                requestStatus: "NEW"
+            }
         if (tutorialRadio.checked){
             requestArray.push(
                 {
