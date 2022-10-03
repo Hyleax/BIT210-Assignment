@@ -54,12 +54,47 @@ const volunteerArray = [
         password: "12345"
     }
 ]
+const schoolAdminArray = [
+    {
+        school : {
+            schoolID: "SCH1",
+            schoolName: "SJK(C) Puay Chai 2",
+            schoolAddress: "Jalan BU 3/1, Bandar Utama",
+            schoolCity: "Petaling Jaya"            
+        }, 
+        username: "pc2admin",
+        password: "12345",
+        fullname: "Bobby Leong",
+        email: "pc2admin@gmail.com",
+        phone: "0122457890",
+        staffID: "STF1",
+        position: "school admin"
+    },
+    {
+        school : {
+            schoolID: "SCH2",
+            schoolName: "SJK(C) Yuk Chai",
+            schoolAddress: "Jalan SS 24/1, Taman Megah",
+            schoolCity: "Petaling Jaya"            
+        }, 
+        username: "yukchaiadmin",
+        password: "12456",
+        fullname: "Constance Wu",
+        email: "yukchaiadmin@gmail.com",
+        phone: "0165578063",
+        staffID: "STF2",
+        position: "school admin"
+    }
+]
 
 const loginToProfile = (e) => {
     e.preventDefault()
 
     // check if user is a superAdmin
     checkSuperAdmin()
+
+    // check if user is a school admin
+    checkSchoolAdmin()
         
     // check if user is a volunteer
     checkVolunteer()
@@ -73,6 +108,16 @@ const checkSuperAdmin = () => {
     }
 }
 
+// function to check if a user is a registered school admin
+const checkSchoolAdmin = () => {
+    schoolAdminArray.forEach((s)=> {
+        if (loginUsername.value === s.username &&
+            loginPassword.value === s.password){
+                window.location = "schoolAdminProfile.html"
+            }
+    })
+}
+
 // function to check if a user is a registered volunteer
 const checkVolunteer = () => {
     volunteerArray.forEach((v) => {
@@ -82,5 +127,6 @@ const checkVolunteer = () => {
             } 
     })
 }
+
 
 loginBtn.addEventListener('click', loginToProfile)
