@@ -1,0 +1,53 @@
+/*CSS for ViewRequests.css*/
+
+.schoolHELP-logo {
+    height: 150px;
+    width: 150px;
+}
+
+.tableDataDetails {
+    display: none;
+} 
+
+.tableRowData{
+    cursor: pointer;
+}
+
+
+
+.tableRowData :hover{
+    transition: 0.2s;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.facebook {
+    height: 95px;
+    margin-right: -35px;
+}
+.instagram {
+    height: 70px;
+    
+}
+.twitter {
+    height: 50px;
+    
+}
+.footer {
+    background-color: #242732;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.facebook .instagram .twitter:hover {
+    flood-opacity: 10px;
+}
+
