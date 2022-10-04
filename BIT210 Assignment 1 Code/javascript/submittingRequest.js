@@ -43,16 +43,16 @@ const requestValidation = () => {
         alert("Request has been submitted")
         let newRequest = 
             {
-                requestDate: Date.now(),
                 requestID: `REQ${requestArray.length+1}`,
-                requestStatus: "NEW"
+                requestStatus: "NEW",
+                requestDate: Date.now()
             }
         if (tutorialRadio.checked){
             requestArray.push(
                 {
                     ...newRequest,
-                    requestType: 'tutorial',
-                    tutorialDescription: tutDescription.value,
+                    requestType: 'Tutorial',
+                    description: tutDescription.value,
                     tutorialTime: tutTime.value,
                     studentLevel: studentLevel.value,
                     noOfStudents: noOfStudents.value
@@ -64,7 +64,7 @@ const requestValidation = () => {
                 {
                     ...newRequest,
                     requestType: 'resource',
-                    resourceDescription: resourceDesc.value,
+                    description: resourceDesc.value,
                     resourceType: resourceType.value,
                     noOfResources: noOfResources.value
                 }
