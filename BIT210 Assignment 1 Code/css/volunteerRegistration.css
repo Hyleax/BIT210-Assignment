@@ -28,6 +28,37 @@
     color: red;
 }
 
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.facebook {
+    height: 95px;
+    margin-right: -35px;
+}
+.instagram {
+    height: 70px;
+    
+}
+.twitter {
+    height: 50px;
+    
+}
+.footer {
+    background-color: #242732;
+    height: 220px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -550px;
+    display: flex;
+    flex-direction: column;
+}
+
+.facebook .instagram .twitter:hover {
+    flood-opacity: 10px;
+}
 
 /*CSS for schoolAdmin Submitting Request page*/
 .tutorial--container{
