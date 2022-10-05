@@ -89,7 +89,7 @@ const requestsArray = [
     }
 ]
 
-// sorting functions
+// SORTING FUNCTIONS
 // sort requests by school
 const sortBySchool = () => {
     requestsArray.sort((a, b)=> {
@@ -121,7 +121,7 @@ const sortByReqDate = () => {
 
 const renderTable = (reqArray) => {
     reqArray.forEach((request)=>{
-
+ 
         // function to show and hide request details
         const showDetails = () => {
             if (!detailsDisplayed){
@@ -152,24 +152,22 @@ const renderTable = (reqArray) => {
         let tableDataDetails;
         if (request.requestType === "Tutorial"){
             tableDataDetails = `
-                <th scope="row">Tutorial Request</th>
+                <th scope="row">
+                    <button class="btn btn-info btn-sm btn-block mx-2">Offer Tutorial</button>
+                </th>
                 <td>class on: ${request.requestDetails.tutorialDate}</td>
                 <td>level: ${request.requestDetails.studentLevel}</td>
                 <td>${request.requestDetails.numOfStudents} students</td>
-                <td>
-                    <button class="btn btn-info btn-sm btn-block mx-2">Offer Help</button>
-                </td>
             `
         }
         else if (request.requestType === "Resource"){
             tableDataDetails = `
-                <th scope="row">Resource Request</th>
+                <th scope="row">
+                <button class="btn btn-info btn-sm btn-block mx-2">Offer Resources</button></th>
+                </th>
                 <td>device type: ${request.requestDetails.resourceType}</td>
                 <td>${request.requestDetails.numRequired} devices needed</td>
                 <td></td>
-                <td>
-                    <button class="btn btn-info btn-sm btn-block mx-2">Offer Help</button>
-                </td>
             `
         }
         
