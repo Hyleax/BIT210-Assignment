@@ -45,7 +45,7 @@ const requestValidation = () => {
             {
                 requestID: `REQ${requestArray.length+1}`,
                 requestStatus: "NEW",
-                requestDate: Date.now()
+                requestDate: new Date()
             }
         if (tutorialRadio.checked){
             requestArray.push(
