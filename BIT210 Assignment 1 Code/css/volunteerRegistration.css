@@ -34,16 +34,16 @@
     align-items: center;
 }
 .facebook {
-    height: 95px;
-    margin-right: -35px;
+    height: 50px;
+    border-radius: 50%;
 }
 .instagram {
     height: 70px;
-    
+    border-radius: 50%;
 }
 .twitter {
     height: 50px;
-    
+    border-radius: 50%;
 }
 .footer {
     background-color: #242732;
