@@ -3,34 +3,44 @@ const school = document.getElementById('school')
 const schoolAddress = document.getElementById('school-address')
 const city = document.getElementById('city')
 const button = document.getElementById('register-button')
-const text = document.getElementById('text')
+const text = document.getElementsByTagName('small')
 
-
-form.addEventListener('submit', e => {
+button.addEventListener('click', e => {
     e.preventDefault();
-
-    validateInput();
-
-    validateButton();
+    if (validateInput()){
+        validateButton()
+    }
 })
 
-function validateInput() {
-    if(school.value > 20) {
-        text.innerHTML="School name is too long";
-        text.style.color = red;
+
+const validateInput = () => {
+    if (school.value === "" || schoolAddress.value ==="" 
+    || city.value === ""){
+        text[3].textContent = "Please fill up all fields"
+        text[3].style.color = "red";
+        return false
+    }
+
+    else if(school.value.length > 20) {
+        text[0].textContent="School name is too long";
+        text[0].style.color = "red";
+        return false
 
     }
-    if(schoolAddress.value < 10) {
-        text.innerHTML = "Invalid school address.";
-        text.style.color = red;
-
+    else if(schoolAddress.value.length < 10) {
+        text[1].textContent = "Invalid school address.";
+        text[1].style.color = "red";
+        return false
     }
-    if(city.value > 20) {
-        text.innerHTML = "City name is too long";
-        text.style.color = red;
+    else if(city.value.length > 20) {
+        text[2].textContent = "City name is too long";
+        text[2].style.color = "red";
+        return false
     }
+   
+    
 }
 
-function validateButton() {
+const validateButton = () => {
     alert('Registered Successfully');
 }
