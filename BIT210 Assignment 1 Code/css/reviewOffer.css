@@ -3,12 +3,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #4fd10f;
+    background-color: #4d94ff;
 }
 #sign-out {
     position: absolute;
     right: 30px;
     top: 30px;
+    background-color: black;
 }
 
 #btn {
