@@ -1,4 +1,7 @@
 /*CSS for ViewRequests.css*/
+body {
+    background-image: url("https://images.unsplash.com/photo-1517934188547-e1a362fa715a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+}
 
 .schoolHELP-logo {
     height: 150px;
@@ -25,27 +28,35 @@
     align-items: center;
 }
 .facebook {
-    height: 95px;
-    margin-right: -35px;
+    height: 50px;
+    border-radius: 50%;
 }
 .instagram {
     height: 70px;
-    
+    border-radius: 50%;
 }
 .twitter {
     height: 50px;
-    
+    border-radius: 50%;
 }
+
 .footer {
     background-color: #242732;
-    height: 200px;
+    height: 220px;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -100px;
+    bottom: -500px;
     display: flex;
     flex-direction: column;
 }
+
+@media only screen and (max-width: 990px) {
+    .footer {
+        bottom: -1000px;
+
+    }
+  }
 
 .facebook .instagram .twitter:hover {
     flood-opacity: 10px;
