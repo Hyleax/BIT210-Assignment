@@ -71,6 +71,7 @@ const requestValidation = () => {
             )
         ]
         console.log(requestArray);
+        window.location = "schoolAdminProfile.html"
     }
 }
 
