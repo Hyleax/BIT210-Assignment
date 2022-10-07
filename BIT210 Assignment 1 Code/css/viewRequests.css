@@ -1,6 +1,7 @@
 /*CSS for ViewRequests.css*/
 body {
     background-image: url("https://images.unsplash.com/photo-1517934188547-e1a362fa715a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    min-height: 100vh;
 }
 
 .schoolHELP-logo {
@@ -46,16 +47,11 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -500px;
     display: flex;
     flex-direction: column;
 }
 
 @media only screen and (max-width: 990px) {
-    .footer {
-        bottom: -1000px;
-
-    }
   }
 
 .facebook .instagram .twitter:hover {
