@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #cfa50e;
+    background-color: #4d94ff;
 }
 
 .form-container {
@@ -28,4 +28,5 @@
     position: absolute;
     right: 30px;
     top: 30px;
+    background-color: black;
 }
