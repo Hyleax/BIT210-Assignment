@@ -48,14 +48,14 @@ function validateInput() {
         return false
     }
     
-    else if(phoneNumber.value.length <= 5) {
+    else if(phoneNumber.value.length > 20) {
         text.textContent = 'Phone number is invalid.';
         text.style.color = 'red'
         return false
     }
 
-    else if(staffID.value.length <= 5) {
-        text.textContent = 'Staff ID is invalid.'
+    else if(staffID.value.length > 10) {
+        text.textContent = 'Staff ID is too long.'
         text.style.color = 'red'
         return false
     }
@@ -67,7 +67,7 @@ function validateInput() {
 
     }
 
-    if(emailValue.match(pattern)) {
+    if(email.value.length.match(pattern)) {
         return true
     }
     else {
