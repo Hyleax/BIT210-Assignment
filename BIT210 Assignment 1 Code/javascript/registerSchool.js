@@ -42,7 +42,7 @@ const validateInput = () => {
         text[2].style.color = "red";
         return false
     }
-   
+    return true
     
 }
 // validateButton() function for register button
