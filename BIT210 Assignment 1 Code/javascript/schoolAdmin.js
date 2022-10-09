@@ -67,7 +67,7 @@ function validateInput() {
 
     }
 
-    if(email.value.length.match(pattern)) {
+    if(email.value.match(pattern)) {
         return true
     }
     else {
