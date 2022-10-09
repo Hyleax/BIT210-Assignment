@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/schoolAdmin.css">
+    <link rel="stylesheet" href="schoolAdmin.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -16,54 +16,39 @@
 
     <a href="login.html" class="btn btn-primary" id="sign-out">Sign out</a>
 
-        <div class="form">
+        <div class="form-container">
             <form action="" id="form">
-                <div class="col-4">
-                    <label for="">Username:</label>
+                    <label for="username">Username:</label>
                     <input type="text" class="form-control" id="username" 
                     placeholder="Enter username" required> <br>
-                </div>
                 
-                <div class="col-4">
-                    <label for="">Password:</label>
+                    <label for="password">Password:</label>
                     <input type="password" class="form-control" id="password" 
                     placeholder="Enter password" required> <br>
-                </div>
                 
         
-                <div class="col-4">
-                    <label for="">Full Name:</label>
+                    <label for="fullname">Full Name:</label>
                     <input type="text" class="form-control" id="fullName" 
                     placeholder="Enter full name" required> <br>
-                </div>
                 
-                <div class="col-4">
-                    <label for="">Email:</label>
+                    <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" 
                     placeholder="Enter email" required> <br>
-                </div>
               
-                <div class="col-4">
-                    <label for="">Phone</label>
+                    <label for="phoneNo">Phone</label>
                     <input type="text" class="form-control" id="phoneNo" 
                     placeholder="Enter phone number" required> <br>
-                </div>
                 
-                <div class="col-4">
-                    <label for="">Staff ID:</label>
+                    <label for="staffID">Staff ID:</label>
                     <input type="text" class="form-control" id="staffID" 
                     placeholder="Enter staff ID" required> <br>
-                </div>
                 
-                <div class="col-4">
-                    <label for="">Position:</label>
+                    <label for="position">Position:</label>
                     <input type="text" class="form-control success" id="position" 
                     placeholder="Enter position" required> <br>
+
+                    <a href="#" class="btn btn-primary" id="register-button">Register Account</a> <br>
                     <small id="text"></small>
-                </div>
-                <div class="d-grid col-4">
-                    <a href="#" class="btn btn-primary" id="register-button">Register Account</a> 
-                </div>
         </form>
         </div>
         <div class="footer">
@@ -72,7 +57,7 @@
             </footer>
         </div>
         
-        <script src="javascript/schoolAdmin.js"></script>
+        <script src="schoolAdmin.js"></script>
 
 </body>
 </html>
