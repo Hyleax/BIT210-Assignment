@@ -1,33 +1,37 @@
-// Declare button variable by id name
-const button = document.getElementById('accept-offer')
-const offer = document.querySelector('.offer')
-const closeReqButton = document.getElementById('btn')
+// Assign variables by by id name
+const button = document.querySelector('#accept-offer');
+const offer = document.querySelector('.offer');
+const closeReqButton = document.getElementById('btn');
 
 // Add event listener to button
-/**
- * button turns green and display "ACCEPTED" when school admin accepts offer
- * become original button if school admin cancels to accept the offer
- */
 button.addEventListener('click', (e) => {
     e.preventDefault()
+
+    validateButton();
+    
+})
+
+/* button turns green and display "ACCEPTED" when school admin accepts offer
+ * become original button if school admin cancels to accept the offer
+ */
+function validateButton() {
     if(button.textContent === 'Accept offer'){
-    button.textContent = "ACCEPTED";
-    button.style.backgroundColor = "#16de31";
-    return true
-}
-    else{
-        button.textContent = 'Accept offer'
-        button.style.backgroundColor = 'blue'
-        return false
+        button.textContent = "ACCEPTED";
+        button.style.backgroundColor = "#16de31";
+        return true
     }
-}) 
+        else{
+            button.textContent = 'Accept offer'
+            button.style.backgroundColor = 'blue'
+            return false
+        }
+}
 /**
  * closeReqButton event listener
  */
 closeReqButton.addEventListener('click', (e)=>{
     e.preventDefault();
-    closeButton();
-      
+    closeButton()  
 })
 /** 
  * function for closing request
