@@ -1,52 +1,7 @@
 // Assign variables by by id name
-const button = document.querySelector('#accept-offer');
+const buttons = document.querySelectorAll('#accept-offer')
 const offer = document.querySelector('.offer');
-const closeReqButton = document.getElementById('btn');
-
-// Add event listener to button
-button.addEventListener('click', (e) => {
-    e.preventDefault()
-
-    validateButton();
-    
-})
-
-/* button turns green and display "ACCEPTED" when school admin accepts offer
- * become original button if school admin cancels to accept the offer
- */
-function validateButton() {
-    if(button.textContent === 'Accept offer'){
-        button.textContent = "ACCEPTED";
-        button.style.backgroundColor = "#16de31";
-        return true
-    }
-        else{
-            button.textContent = 'Accept offer'
-            button.style.backgroundColor = 'blue'
-            return false
-        }
-}
-/**
- * closeReqButton event listener
- */
-closeReqButton.addEventListener('click', (e)=>{
-    e.preventDefault();
-    closeButton()  
-})
-/** 
- * function for closing request
- * Button turns red and display "Closed" when the request is closed
- * become original button if school admin cancels to close the request
-*/
-const closeButton = () => {
-    if(closeReqButton.textContent === 'Close request'){
-        closeReqButton.style.backgroundColor = 'red';
-        closeReqButton.textContent = 'Closed'; }
-        else {
-            closeReqButton.style.backgroundColor = '#4fd10f'
-            closeReqButton.textContent = 'Close request'
-        }
-}
+const closeReqButtons = document.querySelectorAll('#btn');
 
 // List of offers inside offerArray
 const offerArray = [
@@ -74,3 +29,62 @@ const offerArray = [
         Occupation: 'Teacher',
     },
 ]
+
+
+// Add event listener to button
+buttons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        console.log("button is clicked");
+        e.preventDefault()
+    
+        validateButton();
+        
+    })
+
+    function validateButton() {
+        if(btn.textContent === 'Accept offer'){
+            btn.textContent = "ACCEPTED";
+            btn.style.backgroundColor = "#16de31";
+            return true
+        }
+        else{
+            btn.textContent = 'Accept offer'
+            btn.style.backgroundColor = 'blue'
+            return false
+            }
+    }
+})
+
+/* button turns green and display "ACCEPTED" when school admin accepts offer
+ * become original button if school admin cancels to accept the offer
+ */
+
+/**
+ * closeReqButton event listener
+ */
+
+ closeReqButtons.forEach((closeReqButton) => {
+    closeReqButton.addEventListener('click', (e)=>{
+        e.preventDefault();
+        closeButton()  
+    })
+
+        /** 
+     * function for closing request
+     * Button turns red and display "Closed" when the request is closed
+     * become original button if school admin cancels to close the request
+    */
+const closeButton = () => {
+    if(closeReqButton.textContent === 'Close request'){
+        closeReqButton.style.backgroundColor = 'red';
+        closeReqButton.textContent = 'Closed'; }
+        else {
+            closeReqButton.style.backgroundColor = '#4fd10f'
+            closeReqButton.textContent = 'Close request'
+        }
+}
+ })
+
+
+
+
