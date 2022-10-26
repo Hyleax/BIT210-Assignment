@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 150px;
-    background-color: #cfa50e;
+    background-color: #4d94ff;;
 }
 
 .form-container {
@@ -58,4 +58,5 @@ p {
     position: absolute;
     right: 30px;
     top: 30px;
+    background-color: black;
 }
