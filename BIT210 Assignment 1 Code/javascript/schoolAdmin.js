@@ -1,4 +1,4 @@
-// Assign every variable based on their ids
+    // Assign every variable based on their ids
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
@@ -8,69 +8,77 @@ const phoneNumber = document.getElementById('phoneNo');
 const staffID = document.getElementById('staffID');
 const position = document.getElementById('position');
 const button = document.getElementById('register-button');
-const text = document.getElementById('text')
-const signOutBtn = document.getElementById('sign-out')
+const text = document.querySelector('small');
 
-signOutBtn.addEventListener('click', (e)=> {
+// Button event listener
+button.addEventListener('click', (e) => {
     e.preventDefault()
-    window.location = "login.html"    
-})
-
-form.addEventListener('submit', e => {
-    e.preventDefault();
-
-    validateInput();
-
-    validateButton();
+    if(validateInput()){
+        validateButton()}
 })
 
 // Function used for input validation
 function validateInput() {
 
-    const usernameValue = username.value.trim();
-    const passwordValue = password.value.trim();
-    const fullNameValue = fullName.value.trim();
-    const emailValue = email.value.trim();
     let pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-    if(usernameValue > 20){
-        text.innerHTML = 'Username should contain 6 to 20 characters';
+    if(username.value === "" || password.value === "" || fullName.value === "" || email.value === "" 
+    || phoneNumber.value === "" || staffID.value === "" || position.value === "" ){
+        text.textContent = 'Input cannot be blanked.'
+        text.style.color = 'red'
+        return false
+    }
+
+    else if(username.value.length > 20){
+        text.textContent = 'Username should contain 6 to 20 characters';
+        text.style.color = 'red'
+        return false
     }
     
 
-    if(passwordValue < 6 || passwordValue > 20){
-         text.innerHTML='Password must contain 6 to 20 characters.';
-         return false;
+    else if(password.value.length < 6 || password.value.length > 20){
+         text.textContent='Password must contain 6 to 20 characters.';
+         text.style.color = 'red'
+         return false
     } 
     
-    if(fullNameValue > 20){
-        text.innerHTML = 'Name is too long.';
-        return false;
+    else if(fullName.value.length > 20){
+        text.textContent = 'Name is too long.';
+        text.style.color = 'red'
+        return false
     }
     
-    if(phoneNumber.value <= 5) {
-        text.innerHTML = 'Phone number is invalid.';
+    else if(phoneNumber.value.length > 20) {
+        text.textContent = 'Phone number is invalid.';
+        text.style.color = 'red'
+        return false
     }
 
-    if(staffID.value <= 5) {
-        text.innerHTML = 'Staff ID is invalid.'
+    else if(staffID.value.length > 10) {
+        text.textContent = 'Staff ID is too long.'
+        text.style.color = 'red'
+        return false
     }
 
-    if(position.value <= 5) {
-        text.innerHTML = 'Position is invalid.'
+    else if(position.value.length <= 5) {
+        text.textContent = 'Position is invalid.'
+        text.style.color = 'red'
+        return false
+
     }
 
-    if(emailValue.match(pattern)) {
-        return true;
+    if(email.value.match(pattern)) {
+        return true
     }
     else {
-        text.innerHTML = 'Email is invalid';
-        return false;
+        text.textContent = 'Email is invalid'
+        text.style.color = 'red'
+        return false
     }
     
 }
 
+// validateButton() function
 function validateButton() {
     alert('Registered successfully');
-
 }
