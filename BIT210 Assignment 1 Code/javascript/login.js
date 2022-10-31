@@ -63,7 +63,7 @@ const schoolAdminArray = [
             schoolCity: "Petaling Jaya"            
         }, 
         username: "pc2admin",
-        password: "12345",
+        password: "123456789",
         fullname: "Bobby Leong",
         email: "pc2admin@gmail.com",
         phone: "0122457890",

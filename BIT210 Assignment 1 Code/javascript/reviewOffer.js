@@ -1,40 +1,49 @@
 // Declare button variable by id name
-const button = document.getElementById('accept-offer')
+const buttons = document.querySelectorAll('#accept-offer')
 const offer = document.querySelector('.offer')
-const closeReqButton = document.getElementById('btn')
+const closeReqButtons = document.querySelectorAll('#btn')
 
 // Add event listener to button
 /**
  * button turns green and display "ACCEPTED" when school admin accepts offer
  * become original button if school admin cancels to accept the offer
  */
-button.addEventListener('click', (e) => {
-    e.preventDefault()
-    if(button.textContent === 'Accept offer'){
-    button.textContent = "ACCEPTED";
-    button.style.backgroundColor = "#16de31";
-    return true
-}
-    else{
-        button.textContent = 'Accept offer'
-        button.style.backgroundColor = 'blue'
-        return false
+
+buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault()
+        if(button.textContent === 'Accept offer'){
+        button.textContent = "ACCEPTED";
+        button.style.backgroundColor = "#16de31";
+        return true
     }
+        else{
+            button.textContent = 'Accept offer'
+            button.style.backgroundColor = 'blue'
+            return false
+        }
+    }) 
 }) 
+
 /**
  * closeReqButton event listener
  */
-closeReqButton.addEventListener('click', (e)=>{
-    e.preventDefault();
-    closeButton();
-      
-})
+
+ closeReqButtons.forEach(closeReqButton => {
+    closeReqButton.addEventListener('click', (e)=>{
+        e.preventDefault();
+        closeButton(closeReqButton);
+          
+    })
+ })
+
+
 /** 
  * function for closing request
  * Button turns red and display "Closed" when the request is closed
  * become original button if school admin cancels to close the request
 */
-const closeButton = () => {
+const closeButton = (closeReqButton) => {
     if(closeReqButton.textContent === 'Close request'){
         closeReqButton.style.backgroundColor = 'red';
         closeReqButton.textContent = 'Closed'; }

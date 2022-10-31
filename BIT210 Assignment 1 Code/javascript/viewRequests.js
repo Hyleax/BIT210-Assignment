@@ -5,6 +5,7 @@ const sortBySchoolsBtn = document.getElementById('sortbySchools-btn')
 const sortByCityBtn = document.getElementById('sortbyCity-btn')
 const sortByReqDateBtn = document.getElementById('sortbyReqDate-btn')
 
+
 const requestsArray = [
     {
         requestID: `REQ1`,
@@ -154,7 +155,7 @@ const renderTable = (reqArray) => {
         if (request.requestType === "Tutorial"){
             tableDataDetails = `
                 <th scope="row">
-                    <button class="btn btn-info btn-sm btn-block mx-2">Offer to Tutor</button>
+                    <button id ="navigateToSubmitOfferBtn" class="btn btn-info btn-sm btn-block mx-2">Offer to Tutor</button>
                 </th>
                 <td>class on: ${request.requestDetails.tutorialDate}</td>
                 <td>level: ${request.requestDetails.studentLevel}</td>
@@ -164,13 +165,16 @@ const renderTable = (reqArray) => {
         else if (request.requestType === "Resource"){
             tableDataDetails = `
                 <th scope="row">
-                <button class="btn btn-info btn-sm btn-block mx-2">Offer Resources</button></th>
+                <button id ="navigateToSubmitOfferBtn" class="btn btn-info btn-sm btn-block mx-2">Offer Resources</button></th>
                 </th>
                 <td>device type: ${request.requestDetails.resourceType}</td>
                 <td>${request.requestDetails.numRequired} devices needed</td>
                 <td></td>
             `
         }
+
+
+        
         
         const tableRowDetails = document.createElement("tr")
         // adding classes to row details
@@ -182,6 +186,14 @@ const renderTable = (reqArray) => {
         tableBody.append(tableRowDetails)
     
         tableRowWithData.addEventListener('click', showDetails)
+
+
+        const navigateToSubmitOfferBtn = document.getElementById('navigateToSubmitOfferBtn')
+
+        navigateToSubmitOfferBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            window.location = "submitOffer.html"
+        })
     })
 }
 
