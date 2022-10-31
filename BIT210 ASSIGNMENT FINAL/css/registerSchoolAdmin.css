@@ -1,0 +1,32 @@
+.logo {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4d94ff;
+
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;    
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid 1px;
+    background-color: #242732;
+    color:white;
+    height:200px;
+}
+
+#sign-out {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    background-color: black;
+}
