@@ -13,30 +13,31 @@
 <body>
 
     <div class="logo">
-        <a href="index.html"><img src="images/logo.png" class="logo" alt="logo" title="SchoolHELP"></a>
+        <img src="images/logo.png" class="logo" alt="logo" title="SchoolHELP">
     </div>
     
     <a href="login.html" class="btn btn-primary" id="sign-out">Sign out</a>
     
         <div class="form-container">
-            <form id="form">
+            <form id="form" action="registerSchool.php" method="post">
                         <h3>Register Form</h3>
                         <label for="school"  class="form-label">School:</label> <br>
-                        <input type="text" class="form-control error" id="school" required 
+                        <input type="text" class="form-control error" id="school" name="School" required 
                         placeholder="Enter school"> 
                         <small id="text"></small> <br>
                         
                         <label for="schoolAddress" class="form-label">School Address:</label> <br>
-                        <input type="text" class="form-control success" id="school-address" required                    
+                        <input type="text" class="form-control success" id="school-address" name="SchoolAddress" required                    
                          placeholder="Enter school address"> 
                          <small id="text"></small> <br>
                         
                         <label for="city"  class="form-label">City:</label> <br>
-                        <input type="text" class="form-control error" id="city" required 
+                        <input type="text" class="form-control error" id="city" name="City" required 
                         placeholder="Enter city"> 
                         <small id="text"></small> <br>
                     
-                <button class="btn btn-primary" id ="register-button" onclick="validateButton()">Register School</button>
+                <button class="btn btn-primary" id ="register-button" name="registerSchool">Register School</button>
+                <small id="text"></small>
             </form>
         </div>
         <div class="link">
@@ -48,6 +49,7 @@
                 <p>Copyright &copy; 2022. All rights reserved</p>
             </footer>
         </div>
-    <script src="javascript/registerSchool.js"></script>
+    
+        <script src="javascript/registerSchool.js"></script>
 </body>
 </html>
