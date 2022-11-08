@@ -10,7 +10,7 @@ const volunteerArray = [
         occupation: "student",
         dob: "05-09-2001",
         email: "normanyaptw@yahoo.com",
-        password: "12345"
+        password: "987654321"
     }
     ,
     {
@@ -63,7 +63,7 @@ const schoolAdminArray = [
             schoolCity: "Petaling Jaya"            
         }, 
         username: "pc2admin",
-        password: "12345",
+        password: "123456789",
         fullname: "Bobby Leong",
         email: "pc2admin@gmail.com",
         phone: "0122457890",
