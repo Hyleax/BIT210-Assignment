@@ -51,7 +51,7 @@ if (isset($_POST['volunteerRegister-btn'])) {
         }
 
         // check if username is already taken
-        if (testVolunteerUsernameExists($connection, $username)) {
+        if (testVolunteerUsernameExists($con, $username)) {
             header("Location: ../volunteerRegister.php?error=usernametaken&fullname=".$fullName."&phoneNumber=".$phoneNumber."&occupation=".$occupation."&birthdate=".$birthdate."&email=".$email);
             exit();
         }
