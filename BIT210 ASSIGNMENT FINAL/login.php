@@ -160,6 +160,5 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
           </div>
         </div>
       </section>
-      <!-- <script src="javascript/login.js"></script> -->
 </body>
 </html>

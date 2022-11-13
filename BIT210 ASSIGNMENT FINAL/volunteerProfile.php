@@ -25,7 +25,7 @@
     <div class="container">
         <h3>Select option below:</h3>
         <div class="d-grid gap-3 col-4">
-            <a href="viewRequests.html" class="btn btn-primary" id="view-request">View Request</a>
+            <a href="viewRequests.php" class="btn btn-primary" id="view-request">View Request</a>
         </div>    
     </div>
     
