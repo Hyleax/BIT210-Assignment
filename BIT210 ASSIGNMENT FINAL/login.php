@@ -118,7 +118,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             <!--1st column-->
             <div class="col-sm-5">
               <div class="text-center text-dark display-4 pb-5">
-                <a href="index.html"><img src="images/logo.png" alt="" class="schoolHELP-logo"></a>
+                <a href="index.php"><img src="images/logo.png" alt="" class="schoolHELP-logo"></a>
                 <h3>SchoolHELP</h3>
               </div>
 
@@ -145,7 +145,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                   </div>
       
                   <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
-                  <p>Don't have an account?<a href="volunteerRegister.html" class="link-info">Register here</a></p>
+                  <p>Don't have an account?<a href="volunteerRegister.php" class="link-info">Register here</a></p>
       
                 </form>
               </div>

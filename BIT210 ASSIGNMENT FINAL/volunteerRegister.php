@@ -19,7 +19,7 @@
         <div class="container-fluid">
           <div class="row">
               <div class="text-center text-dark display-4">
-                <a href="index.html"><img src="images/logo.png" alt="" class="schoolHELP-logo mt-3"></a>
+                <a href="index.php"><img src="images/logo.png" alt="" class="schoolHELP-logo mt-3"></a>
                 <h3>SchoolHELP</h3>
               </div>
 
