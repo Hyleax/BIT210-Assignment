@@ -19,7 +19,7 @@
 </head>
 <body class="bg-light d-flex flex-column h-100" >
     <div class="text-center text-dark display-4 pb-5">
-      <a href="index.php"><img src="images/logo.png" alt="" class="schoolHELP-logo"></a>
+      <a><img src="images/logo.png" alt="" class="schoolHELP-logo"></a>
       <h3>SchoolHELP</h3>
     </div>
     
