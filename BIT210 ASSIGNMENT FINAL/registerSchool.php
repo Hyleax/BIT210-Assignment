@@ -1,43 +1,55 @@
-<?php
-
-include_once 'db_connect.php';
-
-
-// Create variables based on input names
-$school = $_POST['School'];
-$schoolAddress = $_POST['SchoolAddress'];
-$city = $_POST['City'];
-$registerButton = $_POST['registerSchool'];
-
-// Create input length
-$schoolLength = strlen($school);
-$schoolAddressLength = strlen($schoolAddress);
-$cityLength = strlen($city);
-
-
-// SQL query
-$query = "INSERT INTO schoollist(School Name, Address, City) VALUES('$school', '$schoolAddress', '$city')";
-$result = $connection->query($query);
-
-if ($result){
-    $row = $result->fetch_row();
-    echo $row[0];
-}
-
-// User Validation
-if (isset($registerButton)) {
-    if (empty($school) || empty($schoolAddress) || empty($city)){
-        echo "Input cannot be empty!";
-        
-        }elseif ($schoolLength > 20){
-            echo "School name is too long.";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/registerSchool.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     
-        }elseif ($schoolAddressLength < 10){
-            echo "Invalid school address";
-       
-        }elseif ($cityLength > 20){
-            echo "City name is too long";
-        }
-}
- 
-?>
+    
+    <title>Register School Page</title>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="images/logo.png" class="logo" alt="logo" title="SchoolHELP">
+    </div>
+    
+    <a href="login.html" class="btn btn-primary" id="sign-out">Sign out</a>
+    
+        <div class="form-container">
+            <form id="form" action="registerSchool.inc.php" method="post">
+                        <h3>Register Form</h3>
+                        <label for="school"  class="form-label">School:</label> <br>
+                        <input type="text" class="form-control error" id="school" name="School" required 
+                        placeholder="Enter school"> 
+                        <small id="text"></small> <br>
+                        
+                        <label for="schoolAddress" class="form-label">School Address:</label> <br>
+                        <input type="text" class="form-control success" id="school-address" name="SchoolAddress" required                    
+                         placeholder="Enter school address"> 
+                         <small id="text"></small> <br>
+                        
+                        <label for="city"  class="form-label">City:</label> <br>
+                        <input type="text" class="form-control error" id="city" name="City" required 
+                        placeholder="Enter city"> 
+                        <small id="text"></small> <br>
+                    
+                <button class="btn btn-primary" id ="register-button" name="registerSchool">Register School</button>
+                <small id="text"></small>
+            </form>
+        </div>
+        <div class="link">
+            <a href="registerSchoolAdmin.html">Click here to register school administator</a>
+        </div>
+
+        <div class="footer">
+            <footer>
+                <p>Copyright &copy; 2022. All rights reserved</p>
+            </footer>
+        </div>
+    
+        <script src="javascript/registerSchool.js"></script>
+</body>
+</html>

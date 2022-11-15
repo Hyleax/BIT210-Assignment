@@ -1,18 +1,16 @@
 <?php
 
-// Check connection
-$host = "localhost";
+//Connection to database
+$server = "localhost";
 $user = "root";
 $password = "";
 $database = "schoolhelp";
 
-$connection = new mysqli($host, $user, $password, $database);
+$connection = new mysqli($server, $user, $password, $database);
 
-// Failed to connect to database
-if (!$connection){
+// Check connection
+if (!$connection) {
     die("Failed to connect ". $connection->connect_error);
- } else {
-    echo "Successfully connected.";
-}
+ }
 
 ?>

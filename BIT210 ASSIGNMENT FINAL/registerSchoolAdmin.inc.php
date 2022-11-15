@@ -1,6 +1,6 @@
 <?php
 
-include_once 'db_connect.php';
+require 'db_connect.php';
 
 // Create variables based on input names
 $username = $_POST['Username'];
@@ -12,7 +12,6 @@ $staffID = $_POST['StaffID'];
 $position = $_POST['Position'];
 $registerButton = $_POST['registerButton'];
 
-
 // Create input length using strlen()
 $usernameLen = strlen[$username];
 $passwordLen = strlen[$password];
@@ -21,16 +20,10 @@ $phoneNoLen = strlen[$phoneNo];
 $staffIDLen = strlen[$staffID];
 $positionLen = strlen[$position]
 
-
-
-// Input Validation
-// Username validation
-if(isset(registerButton)) {
-   if (empty($username) || empty($password) || empty($fullName)|| 
-   empty($email)|| empty($phoneNo)|| empty($staffID)|| empty($position)) {
+   if (empty($username) || empty($password) || empty($fullName)|| empty($email)|| empty($phoneNo)
+   || empty($staffID)|| empty($position)) {
       echo "Input fields cannot be empty!";
    }
-
    elseif($usernameLen > 20){
       echo "<br> Username should contain 6 to 20 characters";
    
@@ -59,31 +52,22 @@ if(isset(registerButton)) {
      }elseif ($positionLen <= 5) {
         echo "<br> Position is invalid.";
      }
-}
 
 
-
-// Check connection
-// Server: localhost
-// username: root
-// Password: ""
-// Database name: schoolhelp
-$connection = new mysqli('localhost', 'root', '', 'schoolhelp');
-   
-// Insert values
-// Retrieve values
-$sqlquery = "INSERT INTO schooladminlist VALUES('$username', '$password', '$fullName', 
-                                                '$email', '$staffID', '$position')";
+$sqlquery = "INSERT INTO schooladminlist(`username`, `password`, `fullName`, `email`, `phone`, `staffID`, `position`) 
+             VALUES ('$username','$password','$fullName','$email',$phoneNo,'$staffID','$position')";
 
 // If data is inserted into database
-if ($connection->query($sqlquery)) {
-    echo "<h2>Data has been successfully insert into database.</h2>";
+if (mysqli_query($connection, $sqlquery)) {
+   echo "<h2>Data has been successfully insert into database.</h2>";
 }
 // If failed to insert data into database
 else {
-   mysqli_error($connection);
+  $connection->connect_error;
 }
 
 // Close connection
 $connection->close();
+
+
 ?>
