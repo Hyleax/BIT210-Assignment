@@ -1,6 +1,6 @@
 <?php
 
-require 'db_connect.php';
+require 'includes/db_connect.php';
 
 $remark = $_POST['Remark'];
 
@@ -13,7 +13,7 @@ elseif (strlen($remark) > 200) {
 }
 
 
-$sqlquery = "INSERT INTO submitoffer(`Remark`) VALUES ('$remark')";
+$sqlquery = "INSERT INTO submitoffer(`Remark`, `Offer Status`) VALUES ('$remark', 'PENDING')";
 
 // If data is inserted into database
 if ($connection->query($sqlquery)) {

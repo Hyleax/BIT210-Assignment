@@ -1,6 +1,6 @@
 <?php
 
-require 'db_connect.php';
+require 'includes/db_connect.php';
 
 // Create variables based on input names
 $username = $_POST['Username'];
