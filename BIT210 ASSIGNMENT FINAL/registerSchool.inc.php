@@ -27,7 +27,7 @@ elseif (strlen($city) > 20) {
 
 // Insert query
 
-$sqlquery = "INSERT INTO schoollist(`School Name`, `Address`, `City`) VALUES ('$school', '$schoolAddress', '$city')";
+$sqlquery = "INSERT INTO `school`(`schoolID`, `schoolName`, `schoolAddress`, `city`) VALUES ('S001','$school','$schoolAddress','$city')";
 
 // If data is inserted into database
 if ($connection->query($sqlquery)) {

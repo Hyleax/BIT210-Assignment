@@ -1,5 +1,6 @@
 <?php
 
+// Require db_connect.php
 require 'includes/db_connect.php';
 
 // Create variables based on input names
@@ -12,50 +13,33 @@ $staffID = $_POST['StaffID'];
 $position = $_POST['Position'];
 $registerButton = $_POST['registerButton'];
 
-// Create input length using strlen()
-$usernameLen = strlen[$username];
-$passwordLen = strlen[$password];
-$fullNameLen = strlen[$fullName];
-$phoneNoLen = strlen[$phoneNo];
-$staffIDLen = strlen[$staffID];
-$positionLen = strlen[$position]
 
-   if (empty($username) || empty($password) || empty($fullName)|| empty($email)|| empty($phoneNo)
-   || empty($staffID)|| empty($position)) {
+// Input validation
+if (empty($username) || empty($password) || empty($fullName)|| empty($email)|| empty($phoneNo)|| empty($staffID)|| empty($position)) {
       echo "Input fields cannot be empty!";
    }
-   elseif($usernameLen > 20){
-      echo "<br> Username should contain 6 to 20 characters";
+   elseif (strlen($username) > 20) {
+      echo "Username is too long";
+   }
+   elseif (strlen($password) > 20) {
+      echo "Password is too long";
+   }
+   elseif (strlen($fullName) > 20) {
+      echo "Name is too long";
+   }
+   elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      echo "Invalid email!";
+   }
+   elseif (strlen($staffID) > 10) {
+      echo "Invalid staff ID!";
+   }
+   elseif (strlen($position) > 20) {
+      echo "Invalid position!";
+   }
    
-     // Password validation   
-     }elseif ($passwordLen > 20) {
-        echo "<br> Password";
-     
-     // Full name validation
-     }elseif ($fullNameLen > 20) {
-        echo "<br> Name is too long."; 
-     
-     }
-     // Email validation
-     elseif(!preg_match("~([a-zA-Z0-9!#$%&'*+-/=?^_`{|}~])@([a-zA-Z0-9-]).([a-zA-Z0-9]{2,4})~", $email)) {
-        echo "<br> Invalid email";
-     
-     // Phone Number validation
-     }elseif ($phoneNoLen > 20) {
-        echo "<br> Phone number is invalid.";
-     
-     // Staff ID validation
-     }elseif ($staffIDLen > 10) {
-        echo "<br> Staff ID is too long.";
-     
-     // Position validation 
-     }elseif ($positionLen <= 5) {
-        echo "<br> Position is invalid.";
-     }
-
-
-$sqlquery = "INSERT INTO schooladminlist(`username`, `password`, `fullName`, `email`, `phone`, `staffID`, `position`) 
-             VALUES ('$username','$password','$fullName','$email',$phoneNo,'$staffID','$position')";
+// SQL query
+$sqlquery = "INSERT INTO `schooladministrator`(`username`, `password`, `fullname`, `email`, `phoneNum`, `staffID`, `position`, `schoolID`) 
+             VALUES ('$username','$password','$fullName','$email','$phoneNo','$staffID','$position','12345')";
 
 // If data is inserted into database
 if (mysqli_query($connection, $sqlquery)) {

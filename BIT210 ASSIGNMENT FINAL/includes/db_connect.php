@@ -4,7 +4,7 @@
 $server = "localhost";
 $user = "root";
 $password = "";
-$database = "schoolhelp";
+$database = "colteach";
 
 $connection = new mysqli($server, $user, $password, $database);
 
