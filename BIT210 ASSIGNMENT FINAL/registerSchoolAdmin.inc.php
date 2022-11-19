@@ -42,7 +42,7 @@ $sqlquery = "INSERT INTO `schooladministrator`(`username`, `password`, `fullname
              VALUES ('$username','$password','$fullName','$email','$phoneNo','$staffID','$position','12345')";
 
 // If data is inserted into database
-if (mysqli_query($connection, $sqlquery)) {
+if ($connection->query($sqlquery)) {
    echo "<h2>Data has been successfully insert into database.</h2>";
 }
 // If failed to insert data into database
