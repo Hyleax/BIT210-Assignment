@@ -52,8 +52,9 @@ const sortByReqDate = () => {
 const renderTable = (reqArray) => {
     reqArray.forEach((request)=>{
  
-        // function to show and hide request details
-        const showDetails = () => {
+       if (request.requestStatus === "NEW"){
+         // function to show and hide request details
+         const showDetails = () => {
             if (!detailsDisplayed){
                 detailsDisplayed = true
                 tableRowDetails.classList.remove('tableDataDetails')
@@ -105,7 +106,7 @@ const renderTable = (reqArray) => {
 
         offerButtons.forEach((btn) => {
             btn.addEventListener('click', () => {
-                window.location = "submitOffer.html"
+                window.location = "submitOffer.php"
             })
         })
         
@@ -119,6 +120,7 @@ const renderTable = (reqArray) => {
         tableBody.append(tableRowDetails)
     
         tableRowWithData.addEventListener('click', showDetails)
+       }
     })
 }
 
