@@ -84,7 +84,10 @@ const renderTable = (reqArray) => {
         if ('studentLevel' in request){
             tableDataDetails = `
                 <th scope="row">
-                    <button class="btn btn-info btn-sm btn-block mx-2" id = "offerBtn">Offer Tutorial</button>
+                    <form method = "POST" action = "submitOffer.php">
+                        <input id = "reqTypeSelector" type="text" name= "requestType" value = "${request.requestID}" hidden>
+                        <button type = "submit" class="btn btn-info btn-sm btn-block mx-2" id = "offerBtn">Offer Resources</button></th>
+                    </form>
                 </th>
                 <td>class on: ${request.tutorialDate}</td>
                 <td>level: ${request.studentLevel}</td>
@@ -94,7 +97,10 @@ const renderTable = (reqArray) => {
         else if ('resourceType' in request){
             tableDataDetails = `
                 <th scope="row">
-                <button class="btn btn-info btn-sm btn-block mx-2" id = "offerBtn">Offer Resources</button></th>
+                    <form method = "POST" action = "submitOffer.php">
+                        <input id = "reqTypeSelector" type="text" name= "requestType" value = "${request.requestID}" hidden>
+                        <button type = "submit" class="btn btn-info btn-sm btn-block mx-2" id = "offerBtn">Offer Resources</button></th>
+                    </form>
                 </th>
                 <td>device type: ${request.resourceType}</td>
                 <td>${request.requireNum} devices needed</td>

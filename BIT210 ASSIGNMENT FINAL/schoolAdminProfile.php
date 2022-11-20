@@ -40,7 +40,7 @@
         <h3>Select option below:</h3>
         <div class="d-grid gap-3 col-4">
             <a href="submitRequest.php" class="btn btn-primary" id="submit-request">Submit Request</a>
-            <a href="reviewOffer.html" class="btn btn-primary" id="view-offer">Review Offer</a>
+            <a href="reviewOffer.php" class="btn btn-primary" id="view-offer">Review Offer</a>
         </div>    
     </div>
 

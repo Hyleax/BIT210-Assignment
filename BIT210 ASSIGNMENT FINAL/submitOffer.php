@@ -1,3 +1,12 @@
+<?php
+session_start();
+include("includes/db_connect.php");
+include("includes/profile.inc.php");
+
+//get request ID
+$requestID = $_POST['requestType'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +30,7 @@
         <form action="submitOffer.inc.php" method="post">
             <h2>Submit your offer here:</h2>
             
+            <input type="text" name= "requestID" value = "<?php $requestID; ?>" hidden>
                 <label for="remark">Enter remark here:</label>
                 <textarea class="form-control" id="remark" rows="5" name="Remark" required></textarea> 
                 <small id="text"></small> <br>
