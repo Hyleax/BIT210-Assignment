@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="logo">
-        <a href="index.html"><img src="images/logo.png" alt="logo" class="logo"></a>
+        <a href="index.php"><img src="images/logo.png" alt="logo" class="logo"></a>
     </div>
 
     <img src="images//profile.png" alt="profile" class="user-profile" title="schoolHELP">
