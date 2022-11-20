@@ -74,6 +74,6 @@
 
   
   
-    <script src="javascript/viewRequestsss.js"></script>
+    <script src="javascript/viewRequestssss.js"></script>
 </body>
 </html>
