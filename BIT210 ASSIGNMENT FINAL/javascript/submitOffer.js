@@ -5,8 +5,6 @@ const button = document.getElementById('submit');
 
 // Button event listener
 button.addEventListener('click', (e) =>{
-    e.preventDefault();
-
     if(validateInput()) {
         validateButton()
         window.location = "volunteerProfile.html"
