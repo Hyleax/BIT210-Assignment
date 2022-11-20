@@ -16,7 +16,7 @@
         <img src="images/logo.png" class="logo" alt="logo" title="SchoolHELP">
     </div>
     
-    <a href="login.html" class="btn btn-primary" id="sign-out">Sign out</a>
+    <a href="login.php" class="btn btn-primary" id="sign-out">Sign out</a>
     
         <div class="form-container">
             <form id="form" action="registerSchool.inc.php" method="post">
@@ -36,12 +36,12 @@
                         placeholder="Enter city"> 
                         <small id="text"></small> <br>
                     
-                <button class="btn btn-primary" id ="register-button" name="registerSchool">Register School</button>
+                <button type = "submit" class="btn btn-primary" id ="register-button" name="registerSchool">Register School</button>
                 <small id="text"></small>
             </form>
         </div>
         <div class="link">
-            <a href="registerSchoolAdmin.html">Click here to register school administator</a>
+            <a href="registerSchoolAdmin.php">Click here to register school administator</a>
         </div>
 
         <div class="footer">
@@ -50,6 +50,6 @@
             </footer>
         </div>
     
-        <script src="javascript/registerSchool.js"></script>
+        <script src="javascript/registerSchools.js"></script>
 </body>
 </html>

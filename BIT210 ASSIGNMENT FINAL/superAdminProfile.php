@@ -20,12 +20,12 @@
 
     <img src="images//profile.png" alt="profile" class="user-profile" title="schoolHELP">
 
-    <h2> <?php echo $fullNameSA?> (Super Admin)</h2>
+    <h2><?php echo $fullnameSA; ?> (Super Admin)</h2>
 
     <div class="container">
         <h3>Select option below:</h3>
         <div class="d-grid gap-3 col-4">
-            <a href="registerSchool.html" class="btn btn-primary" id="register-school">Register School</a>
+            <a href="registerSchool.php" class="btn btn-primary" id="register-school">Register School</a>
         </div>    
     </div>
 
