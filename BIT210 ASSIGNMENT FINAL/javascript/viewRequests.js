@@ -22,6 +22,9 @@ console.log(requestsArray)
 // SORTING FUNCTIONS
 // sort requests by school
 const sortBySchool = () => {
+    sortBySchoolsBtn.style.backgroundColor = "red";
+    sortByCityBtn.style.backgroundColor = "";
+    sortByReqDateBtn.style.backgroundColor = "";
     requestsArray.sort((a, b)=> {
         if (a.schoolName > b.schoolName) return 1;
         if (a.schoolName < b.schoolName) return -1;
@@ -33,6 +36,9 @@ const sortBySchool = () => {
 
 // sort requests by city
 const sortByCity = () => {
+    sortBySchoolsBtn.style.backgroundColor = "";
+    sortByCityBtn.style.backgroundColor = "#CBC3E3";
+    sortByReqDateBtn.style.backgroundColor = "";
     requestsArray.sort((a, b)=> {
         if (a.city > b.city) return 1;
         if (a.city < b.city) return -1;
@@ -44,6 +50,9 @@ const sortByCity = () => {
 
 // sort requests by Request date
 const sortByReqDate = () => {
+    sortBySchoolsBtn.style.backgroundColor = "";
+    sortByCityBtn.style.backgroundColor = "";
+    sortByReqDateBtn.style.backgroundColor = "yellow";
     requestsArray.sort((a, b)=> new Date(a.requestDate) - new Date(b.requestDate))
     tableBody.innerHTML = "";
     renderTable(requestsArray)

@@ -13,6 +13,7 @@ $occupation;
 $email;
 $phoneNumber;
 $age;
+$volunteerID;
 
 // variables for school admin
 $fullnameSA;
@@ -37,6 +38,7 @@ if (mysqli_num_rows($volunteerResult) > 0) {
     }
 
     foreach($data as $v){
+        $volunteerID = $v['volunteerID'];
         $fullName = $v['fullname'];
         $birthdate = $v['dateOfBirth'];
         $occupation = $v['occupation'];
@@ -55,8 +57,6 @@ if (mysqli_num_rows($volunteerResult) > 0) {
     $birthYear = $birthdateArray[0];
 
     $age = $systemDate[0] - $birthdateArray[0];
-    
-    $userType = "Volunteer 💜";
 }
 
 //else check if the username is in the school admin table
@@ -73,13 +73,5 @@ else if(mysqli_num_rows($schoolAdminResult) > 0){
         $staffID = $sa["staffID"];
         $schoolID = $sa["schoolID"];
     }
-
-    if($position <> "Super Admin"){
-        $userType = "School Admin 🧡";
-    }
-    else if($fullnameSA === "Super Admin"){
-        $userType = "Super Admin 💙";
-    }
-    
 }
 

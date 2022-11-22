@@ -1,8 +1,12 @@
 <?php
+session_start();
 
 // require db_connect.php file
 require 'includes/db_connect.php';
+include("includes/profile.inc.php");
 
+
+$volunteerID = $_POST['volunteerID'];
 $remark = $_POST['Remark'];
 $requestID = $_POST['requestID'];
 
@@ -18,11 +22,14 @@ elseif (strlen($remark) > 200) {
 }
 
 
-$sqlquery = "INSERT INTO offer(`offerStatus`, `offerID`, `offerDate`, `remarks`, `volunteerID`, `requestID`) VALUES ('PENDING','$offerID','20-11-2022','$remark','V001','$requestID')";
+$offerID = 
+
+$sqlquery = "INSERT INTO offer(`offerStatus`, `offerDate`, `remarks`, `volunteerID`, `requestID`) VALUES ('PENDING','20-11-2022','$remark','$volunteerID','$requestID')";
 
 // If data is inserted into database
 if ($connection->query($sqlquery)) {
-    echo "<h2>Data has been successfully insert into database.</h2>";
+    header("Location: ./viewRequests.php?success=submitoffer");
+    exit(); // exit
 }else {
    $connection->error; // If failed to insert data into database
 }
