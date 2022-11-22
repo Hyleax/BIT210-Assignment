@@ -17,7 +17,14 @@
     <div class="logo">
         <a href="index.php"><img src="images/logo.png" alt="logo" class="logo" title="schoolHELP"></a>
     </div>
+    <?php
+      if (isset($_GET["success"])){
+        if ($_GET["success"] == "submitoffer") {
+          echo "<h3 class = \"mt-3 text-primary\">You have successfully submitted an offer</h3>";
+        }
+      }
 
+    ?>
     <img src="images/profile.png" alt="profile" class="user-profile">
 
     <h2><?php echo $fullName?> (Volunteer)</h2>

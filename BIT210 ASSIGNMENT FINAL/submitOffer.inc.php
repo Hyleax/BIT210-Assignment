@@ -28,7 +28,7 @@ $sqlquery = "INSERT INTO offer(`offerStatus`, `offerDate`, `remarks`, `volunteer
 
 // If data is inserted into database
 if ($connection->query($sqlquery)) {
-    header("Location: ./viewRequests.php?success=submitoffer");
+    header("Location: ./volunteerProfile.php?success=submitoffer");
     exit(); // exit
 }else {
    $connection->error; // If failed to insert data into database

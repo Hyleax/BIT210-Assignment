@@ -25,14 +25,7 @@
     
     <div class="text-center">
 
-    <?php
-      if (isset($_GET["success"])){
-        if ($_GET["success"] == "submitoffer") {
-          echo "<h3 class = \"text-primary\">You have successfully submitted an offer</h3>";
-        }
-      }
-
-    ?>
+   
       <h2 class=" pt-2 pb-4">All Requests</h2>
       <p class="text-primary">click on a request to find out more details</p>
     </div>
