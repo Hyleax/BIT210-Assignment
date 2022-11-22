@@ -134,7 +134,7 @@ function createVolunteer($con, $username, $fullName, $phoneNumber, $occupation,$
             $occupation, $birthdate, $email);
             mysqli_stmt_execute($stmt);
                         
-            header("Location: ../login.html?success=volunteerRegistered");
+            header("Location: ../login.php?success=volunteerRegistered");
             exit();
     }
 }
