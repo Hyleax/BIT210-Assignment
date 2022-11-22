@@ -36,6 +36,5 @@
     </div>
 
     <a class="btn btn-primary" id="sign-out" href="includes/logout.inc.php">Sign out</a>
-
 </body>
 </html>

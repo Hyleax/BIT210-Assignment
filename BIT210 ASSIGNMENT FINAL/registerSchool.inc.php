@@ -31,7 +31,8 @@ $sqlquery = "INSERT INTO `school`(`schoolID`, `schoolName`, `schoolAddress`, `ci
 
 // If data is inserted into database
 if ($connection->query($sqlquery)) {
-    echo "<h2>Data has been successfully insert into database.</h2>";
+  header("Location: ./registerSchoolAdmin.php?regisschool=success&school=".$school);
+  exit();
  }
  // If failed to insert data into database
  else {

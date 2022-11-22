@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+
+    if (isset($_GET['school'])){
+        $schoolName = $_GET['school'];
+
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +30,8 @@
 
         <div class="form-container">
             <form action="registerSchoolAdmin.inc.php" method="post" id="form">
+                    <input type="text" name = "schoolname" value = "<?php echo $schoolName?>" hidden>
+
                     <label for="username">Username:</label>
                     <input type="text" class="form-control" id="username" 
                     placeholder="Enter username" name="Username" required> <br>
@@ -57,7 +71,7 @@
             </footer>
         </div>
         
-        <script src="javascript/schoolAdmin.js"></script>
+        <script src="javascript/schoolAdmins.js"></script>
 
 </body>
 </html>
