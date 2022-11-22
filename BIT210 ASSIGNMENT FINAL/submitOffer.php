@@ -23,7 +23,7 @@ $requestID = $_POST['requestType'];
         <img src="images/logo.png" alt="schoolHELP logo" class="logo" 
         title="SchoolHELP">
 
-        <a href="login.php" class="btn btn-primary" id="sign-out">Sign out</a>
+        <a  href="includes/logout.inc.php" class="btn btn-primary" id="sign-out">Sign out</a>
 
     </div>
     <div class="form-container">

@@ -13,7 +13,7 @@
         <img src="images/logo.png" class="logo" alt="logo" title="SchoolHELP">
     </div>
 
-    <a href="login.php" class="btn btn-primary" id="sign-out">Sign out</a>
+    <a  href="includes/logout.inc.php" class="btn btn-primary" id="sign-out">Sign out</a>
 
     <div class="offer">
         <div class="offer-1">

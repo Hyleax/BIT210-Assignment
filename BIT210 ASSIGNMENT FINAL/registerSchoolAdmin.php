@@ -14,7 +14,7 @@
         <img src="images/logo.png" alt="logo" class="logo" title="SchoolHELP">
     </div>
 
-    <a href="login.php" class="btn btn-primary" id="sign-out">Sign out</a>
+    <a  href="includes/logout.inc.php" class="btn btn-primary" id="sign-out">Sign out</a>
 
         <div class="form-container">
             <form action="registerSchoolAdmin.inc.php" method="post" id="form">
